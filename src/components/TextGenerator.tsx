@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { useApiKey } from "@/contexts/ApiKeyContext";
+import Markdown from "react-markdown";
 
 const TextGenerator = () => {
   const [prompt, setPrompt] = useState("");
@@ -127,7 +128,7 @@ const TextGenerator = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 gap-8">
         {/* Input Section */}
         <div className="space-y-6">
           <div className="glass-card p-6 rounded-2xl">
@@ -219,7 +220,7 @@ const TextGenerator = () => {
             <div className="min-h-[400px] bg-white/5 rounded-lg p-4 border border-white/20">
               {generatedText ? (
                 <div className="text-white/90 whitespace-pre-wrap leading-relaxed">
-                  {generatedText}
+                  <Markdown>{generatedText}</Markdown>
                 </div>
               ) : (
                 <div className="flex items-center justify-center h-full text-white/50">
