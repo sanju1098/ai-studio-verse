@@ -24,7 +24,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 prime-card m-4 rounded-lg">
+    <nav className="sticky top-0 z-50 prime-card rounded-lg">
       <div className="prime-container">
         <div className="flex justify-between items-center h-16">
           {/* Logo Section */}
