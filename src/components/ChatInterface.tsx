@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { useApiKey } from "@/contexts/ApiKeyContext";
+import Markdown from "react-markdown";
 
 interface Message {
   id: string;
@@ -130,7 +131,9 @@ const ChatInterface = () => {
                         ? "bg-blue-500 text-white"
                         : "bg-white/10 text-white"
                     }`}>
-                    <p className="text-sm">{message.text}</p>
+                    <p className="text-sm">
+                      <Markdown>{message.text}</Markdown>
+                    </p>
                     <p className="text-xs opacity-70 mt-1">
                       {message.timestamp.toLocaleTimeString()}
                     </p>

@@ -7,6 +7,10 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import textGeneratorImage from "@/assets/textGenerator.jpg";
+import imageAnalyzerImage from "@/assets/imageAnalyzer.jpg";
+import chatAssistantImage from "@/assets/chatAssistant.jpg";
+import templatesImage from "@/assets/templates.jpg";
 
 const Features = () => {
   const features = [
@@ -17,8 +21,7 @@ const Features = () => {
         "Create compelling articles, stories, and content with our advanced AI text generation engine.",
       path: "/text-generator",
       color: "text-blue-400",
-      image:
-        "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=400&h=300",
+      image: textGeneratorImage,
     },
     {
       icon: Image,
@@ -27,8 +30,7 @@ const Features = () => {
         "Upload images and get detailed AI-powered analysis, recognition, and insights instantly.",
       path: "/image-analyzer",
       color: "text-cyan-400",
-      image:
-        "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=400&h=300",
+      image: imageAnalyzerImage,
     },
     {
       icon: MessageCircle,
@@ -37,8 +39,7 @@ const Features = () => {
         "Engage in natural, intelligent conversations with our advanced AI assistant.",
       path: "/chat",
       color: "text-blue-300",
-      image:
-        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&h=300",
+      image: chatAssistantImage,
     },
     {
       icon: Layout,
@@ -47,8 +48,7 @@ const Features = () => {
         "Access pre-built templates for various content types and professional use cases.",
       path: "/templates",
       color: "text-indigo-400",
-      image:
-        "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&w=400&h=300",
+      image: templatesImage,
     },
   ];
 
@@ -98,7 +98,7 @@ const Features = () => {
 
                   <p className="prime-text-base mb-4">{feature.description}</p>
 
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="">
                     <span className="text-blue-400 text-sm font-medium">
                       Explore Feature →
                     </span>

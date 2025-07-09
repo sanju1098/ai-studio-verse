@@ -3,6 +3,7 @@ import { Upload, Image as ImageIcon, Sparkles, Loader, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { useApiKey } from "@/contexts/ApiKeyContext";
+import Markdown from "react-markdown";
 
 const ImageAnalyzer = () => {
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
@@ -214,7 +215,7 @@ const ImageAnalyzer = () => {
             <div className="min-h-[400px] bg-white/5 rounded-lg p-4 border border-white/20">
               {analysis ? (
                 <div className="text-white/90 whitespace-pre-wrap leading-relaxed">
-                  {analysis}
+                  <Markdown>{analysis}</Markdown>
                 </div>
               ) : (
                 <div className="flex items-center justify-center h-full text-white/50">
