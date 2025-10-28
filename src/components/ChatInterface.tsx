@@ -30,7 +30,9 @@ const ChatInterface = () => {
     if (!inputMessage.trim() || isLoading) return;
 
     if (!hasApiKey) {
-      alert("Please set your Gemini (gemini-2.5-flash) API key in the navbar first.");
+      alert(
+        "Please set your Gemini (gemini-2.5-flash) API key in the navbar first.",
+      );
       return;
     }
 
@@ -80,7 +82,9 @@ const ChatInterface = () => {
       }
     } catch (error) {
       console.error("Error calling Gemini API:", error);
-      alert(Sorry, I encountered an error. Please try again using Gemini 2.5 flash key.");
+      alert(
+        "Sorry, I encountered an error. Please try again using Gemini 2.5 flash key.",
+      );
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         text: "Sorry, I encountered an error. Please try again.",
