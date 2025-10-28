@@ -30,7 +30,7 @@ const ChatInterface = () => {
     if (!inputMessage.trim() || isLoading) return;
 
     if (!hasApiKey) {
-      alert("Please set your Gemini API key in the navbar first.");
+      alert("Please set your Gemini (gemini-2.5-flash) API key in the navbar first.");
       return;
     }
 
@@ -47,7 +47,7 @@ const ChatInterface = () => {
 
     try {
       const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
         {
           method: "POST",
           headers: {
@@ -80,6 +80,7 @@ const ChatInterface = () => {
       }
     } catch (error) {
       console.error("Error calling Gemini API:", error);
+      alert(Sorry, I encountered an error. Please try again using Gemini 2.5 flash key.");
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         text: "Sorry, I encountered an error. Please try again.",
