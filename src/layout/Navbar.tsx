@@ -65,7 +65,9 @@ const Navbar = () => {
                     }`}>
                     <Key className="h-4 w-4" />
                     <span className="text-sm">
-                      {hasApiKey ? "API Key Set" : "Set API Key"}
+                      {hasApiKey
+                        ? "API Key Set"
+                        : "Set Gemini 2.5 flash API Key"}
                     </span>
                   </button>
                 </PopoverTrigger>
@@ -84,7 +86,8 @@ const Navbar = () => {
                       className="bg-white/10 border-white/20 text-white placeholder-white/50"
                     />
                     <p className="text-xs text-white/60">
-                      This key will be used across all AI features
+                      This key will be used across all AI features (Use Gemini
+                      2.5 Flash)
                     </p>
                   </div>
                 </PopoverContent>
@@ -120,7 +123,8 @@ const Navbar = () => {
                         className="bg-white/10 border-white/20 text-white placeholder-white/50"
                       />
                       <p className="text-xs text-white/60">
-                        This key will be used across all AI features
+                        This key will be used across all AI features (Use Gemini
+                        2.5 Flash)
                       </p>
                     </div>
 

@@ -65,40 +65,41 @@ const Features = () => {
           </p>
         </div>
 
-        <div className="prime-grid">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           {features.map((feature, index) => (
             <Link
               key={`${feature.title}-${index}`}
               to={feature.path}
-              className="group block">
-              <div className="prime-card p-0 rounded-xl h-full transition-all duration-300 group-hover:prime-card-hover group-hover:transform group-hover:scale-105 overflow-hidden">
+              className="group block h-full">
+              <div className="prime-card p-0 rounded-xl h-full flex flex-col transition-all duration-300 group-hover:prime-card-hover group-hover:transform group-hover:scale-105 overflow-hidden">
                 {/* Image Header */}
                 <div className="relative h-48 overflow-hidden">
-                  <img
+                  {/* <img
+                    loading="lazy"
                     src={feature.image}
                     alt={feature.title}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  /> */}
+                  <feature.icon
+                    className={`h-full w-full ${feature.color} group-hover:animate-pulse-glow`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
                   <div className="absolute top-4 right-4">
                     <ArrowRight className="h-5 w-5 text-white/60 group-hover:text-blue-400 transition-colors" />
                   </div>
-                  <div className="absolute bottom-4 left-4">
-                    <feature.icon
-                      className={`h-8 w-8 ${feature.color} group-hover:animate-pulse-glow`}
-                    />
-                  </div>
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
+                <div className="p-6 flex-1 flex flex-col">
                   <h3 className="prime-heading-md text-white mb-3 group-hover:text-blue-300 transition-colors">
                     {feature.title}
                   </h3>
 
-                  <p className="prime-text-base mb-4">{feature.description}</p>
+                  <p className="prime-text-base mb-4 flex-1">
+                    {feature.description}
+                  </p>
 
-                  <div className="">
+                  <div>
                     <span className="text-blue-400 text-sm font-medium">
                       Explore Feature →
                     </span>
